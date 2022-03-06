@@ -1,19 +1,21 @@
 <script setup>
-import { computed } from 'vue'
-import { useStore } from 'vuex'
-import { useRouter } from 'vue-router'
+import { ref } from 'vue'
+import Header from '../components/Header.vue'
+import Footer from '../components/Footer.vue'
 
-const store = useStore()
-const router = useRouter()
-
-const user = computed(() => store.getters.getUser())
+const menu = ref(false)
 </script>
 
 <template>
   <div class="
     min-h-screen
     bg-black
+    text-white
   ">
+    <Header />
+
     <router-view></router-view>
+
+    <Footer />
   </div>
 </template>
