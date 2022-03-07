@@ -18,7 +18,13 @@ import BackgroundMedia from '../components/BackgroundMedia.vue'
         class="w-44"
       >
 
-      <p class="text-zinc-400 text-center">
+      <p class="
+        text-zinc-400
+        text-center
+        font-roboto
+        font-semibold
+        tracking-wider
+      ">
         ready to bounce?
       </p>
 
