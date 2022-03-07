@@ -1,17 +1,24 @@
+/** Class representing a music player. */
 class Player {
+  /**
+   * Create a music player.
+   * @param {array} playlist - an array of songs
+   */
   constructor(playlist) {
     this.playlist = playlist
-    this.currentSong = playlist.length - 1
+    this.currentSongPosition = playlist.length - 1
     this.repeatMode = 0
     this.randomMode = false
   }
 
+  /** Current song object getter. */
   get song() {
-    return this.playlist[this.currentSong]
+    return this.playlist[this.currentSongPosition]
   }
 
   /**
-   * @param {string} mode
+   * Repeat mode setter.
+   * @param {string} mode - the repeat mode name
    */
   set repeat(mode) {
     switch (mode) {
@@ -27,27 +34,45 @@ class Player {
     }
   }
 
-  /**
-   * @param {boolean} mode
-   */
-  set random(mode) {
-    this.randomMode = mode
+  /** Random mode switch. */
+  random() {
+    this.randomMode = !this.randomMode
   }
 
+  /**
+   * Add a song to the playlist.
+   * @param {object} song - a song object
+   */
   add(song) {
     this.playlist.push(song)
   }
 
+  /**
+   * Remove a song from the playlist.
+   * @param {object} song - a song object
+   */
   remove(song) {
-    this.playlist.pop(song)
+    this.playlist = this.playlist.filter(
+      elt => { if (elt.id !== song.id) return elt }
+    )
   }
 
+  /**
+   * Set the current song to the previous playlist position.
+   * @returns {object} - the new current song object
+   */
   previous() {
-    this.currentSong === 0 ? this.currentSong = this.playlist - 1 : this.currentSong -= 1
+    this.currentSongPosition === 0 ? this.currentSongPosition = this.playlist - 1 : this.currentSongPosition -= 1
+    return this.song
   }
 
+  /**
+   * Set the current song to the next playlist position.
+   * @returns {object} - the new current song object
+   */
   next() {
-    this.currentSong === this.playlist.length - 1 ? this.currentSong = 0 : this.currentSong += 1
+    this.currentSongPosition === this.playlist.length - 1 ? this.currentSongPosition = 0 : this.currentSongPosition += 1
+    return this.song
   }
 }
 

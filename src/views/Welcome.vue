@@ -13,7 +13,7 @@ import BackgroundMedia from '../components/BackgroundMedia.vue'
 
     <router-link :to="{ name: 'home' }" class="m-auto relative">
       <img
-        src="../../public/logo.svg"
+        src="/logo.svg"
         alt="bloggify logo"
         class="w-44"
       >

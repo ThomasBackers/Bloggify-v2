@@ -6,9 +6,9 @@
 
     <router-link :to="{ name: 'home' }">
       <img
-        src="../../public/logo.svg"
+        src="/logo.svg"
         alt="bloggify logo"
-        class="w-28"
+        class="w-32"
       >
     </router-link>
   </header>  
