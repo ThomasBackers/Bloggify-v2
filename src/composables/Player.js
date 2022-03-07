@@ -43,7 +43,7 @@ class Player {
   }
 
   previous() {
-    this.currentSong === 0 ? this.currentSong -= 1 : this.currentSong = this.playlist - 1
+    this.currentSong === 0 ? this.currentSong = this.playlist - 1 : this.currentSong -= 1
   }
 
   next() {
