@@ -47,7 +47,7 @@ class Player {
   }
 
   next() {
-    //
+    this.currentSong === this.playlist.length - 1 ? this.currentSong = 0 : this.currentSong += 1
   }
 }
 
