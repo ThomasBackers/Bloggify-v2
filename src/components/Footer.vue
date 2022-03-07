@@ -7,10 +7,14 @@ defineProps({
     required: true
   }
 })
+
+const handleFooterDisplay = () => {
+  console.log('it works!')
+}
 </script>
 
 <template>
-  <FooterToggler />
+  <FooterToggler @toggle="handleFooterDisplay" />
 
   <div class="
     text-black
@@ -24,6 +28,7 @@ defineProps({
 
     <footer class="
       bg-stone-50
+      text-stone-700
       flex
       flex-col
       w-3/4
@@ -33,6 +38,37 @@ defineProps({
       pb-24
       pt-12
     ">
+      <h3 class="
+        uppercase
+        text-[0.85rem]
+        tracking-wider
+        text-stone-400
+      ">
+        socials
+      </h3>
+
+      <ul class="pb-8">
+        <li class="
+          uppercase
+          text-[0.85rem]
+          tracking-wider
+        ">
+          <a href="https://github.com/ThomasBackers">
+            github
+          </a>
+        </li>
+
+        <li class="
+          uppercase
+          text-[0.85rem]
+          tracking-wider
+        ">
+          <a href="https://www.linkedin.com/in/thomas-backers-54197621b/">
+            linkedin
+          </a>
+        </li>
+      </ul>
+
       <p class="text-sm pb-1">
         &copy; {{ new Date().getFullYear() + ` ${appName}` }}
       </p>

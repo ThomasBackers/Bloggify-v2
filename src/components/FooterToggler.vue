@@ -1,5 +1,11 @@
 <script setup>
 import { ChevronUpIcon } from '@heroicons/vue/solid'
+
+const emit = defineEmits(['toggle'])
+
+const handleToggler = () => {
+  emit('toggle')
+}
 // bg-stone-400
 // opacity-30
 </script>
@@ -17,6 +23,7 @@ import { ChevronUpIcon } from '@heroicons/vue/solid'
       -ml-[26px]
       z-[1]
     "
+    @click="handleToggler"
   >
     <ChevronUpIcon class="w-7" />
   </button>
