@@ -8,13 +8,13 @@ defineProps({
   }
 })
 
-const handleFooterDisplay = () => {
+const handleFooter = () => {
   console.log('it works!')
 }
 </script>
 
 <template>
-  <FooterToggler @toggle="handleFooterDisplay" />
+  <FooterToggler @toggle="handleFooter" />
 
   <div class="
     text-black
@@ -40,9 +40,10 @@ const handleFooterDisplay = () => {
     ">
       <h3 class="
         uppercase
-        text-[0.85rem]
+        text-xs
         tracking-wider
         text-stone-400
+        pb-0.5
       ">
         socials
       </h3>
@@ -50,8 +51,9 @@ const handleFooterDisplay = () => {
       <ul class="pb-8">
         <li class="
           uppercase
-          text-[0.85rem]
+          text-xs
           tracking-wider
+          pb-0.5
         ">
           <a href="https://github.com/ThomasBackers">
             github
@@ -60,7 +62,7 @@ const handleFooterDisplay = () => {
 
         <li class="
           uppercase
-          text-[0.85rem]
+          text-xs
           tracking-wider
         ">
           <a href="https://www.linkedin.com/in/thomas-backers-54197621b/">

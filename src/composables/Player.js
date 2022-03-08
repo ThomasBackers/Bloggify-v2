@@ -62,7 +62,7 @@ class Player {
    * @returns {object} - the new current song object
    */
   previous() {
-    this.currentSongPosition === 0 ? this.currentSongPosition = this.playlist - 1 : this.currentSongPosition -= 1
+    this.currentSongPosition === 0 ? this.currentSongPosition = this.playlist.length - 1 : this.currentSongPosition -= 1
     return this.song
   }
 
