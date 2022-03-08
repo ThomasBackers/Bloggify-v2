@@ -17,11 +17,10 @@ const footerContainer = ref(null)
 const handleFooter = () => {
   if (!isFooterOpen) {
     footerContainer.value.style.animation = 'footerAppear .2s ease-out forwards'
-    isFooterOpen = !isFooterOpen
   } else if (isFooterOpen) {
     footerContainer.value.style.animation = 'footerDisappear .2s ease-out'
-    isFooterOpen = !isFooterOpen
   }
+  isFooterOpen = !isFooterOpen
 }
 </script>
 
