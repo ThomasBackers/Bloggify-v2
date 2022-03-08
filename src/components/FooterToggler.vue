@@ -12,6 +12,7 @@ const handleToggler = () => {
 
 <template>
   <button
+    type="button"
     class="
       rounded-full
       bg-black

@@ -19,8 +19,8 @@ const shuffleArr = array => {
 
 export const state = {
   player: {
-    playlist: [],
-    currentPosition: [].length - 1,
+    playlist: ['a'],
+    currentPosition: ['a'].length - 1,
     randomMode: false
   }
 }

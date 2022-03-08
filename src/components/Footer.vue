@@ -1,5 +1,7 @@
 <script setup>
 import FooterToggler from './FooterToggler.vue'
+import Socials from './Socials.vue'
+import Player from './Player.vue'
 
 defineProps({
   appName: {
@@ -38,38 +40,14 @@ const handleFooter = () => {
       pb-24
       pt-12
     ">
-      <h3 class="
-        uppercase
-        text-xs
-        tracking-wider
-        text-stone-400
-        pb-0.5
-      ">
-        socials
-      </h3>
+      <Player />
 
-      <ul class="pb-8">
-        <li class="
-          uppercase
-          text-xs
-          tracking-wider
-          pb-0.5
-        ">
-          <a href="https://github.com/ThomasBackers">
-            github
-          </a>
-        </li>
-
-        <li class="
-          uppercase
-          text-xs
-          tracking-wider
-        ">
-          <a href="https://www.linkedin.com/in/thomas-backers-54197621b/">
-            linkedin
-          </a>
-        </li>
-      </ul>
+      <Socials
+        :medias="[
+          { label: '', href: ''},
+          { label: '', href: ''}
+        ]"
+      />
 
       <p class="text-sm pb-1">
         &copy; {{ new Date().getFullYear() + ` ${appName}` }}
