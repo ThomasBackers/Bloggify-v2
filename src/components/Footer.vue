@@ -44,8 +44,8 @@ const handleFooter = () => {
 
       <Socials
         :medias="[
-          { label: '', href: ''},
-          { label: '', href: ''}
+          { label: 'github', href: 'https://github.com/ThomasBackers'},
+          { label: 'linkedin', href: 'https://www.linkedin.com/in/thomas-backers-54197621b/'}
         ]"
       />
 

@@ -1,6 +1,9 @@
 <script setup>
 defineProps({
-  medias: Array
+  medias: {
+    type: Array,
+    required: true
+  }
 })
 </script>
 
@@ -16,24 +19,17 @@ defineProps({
   </h3>
 
   <ul class="pb-8">
-    <li class="
-      uppercase
-      text-xs
-      tracking-wider
-      pb-0.5
-    ">
-      <a href="https://github.com/ThomasBackers">
-        github
-      </a>
-    </li>
-
-    <li class="
-      uppercase
-      text-xs
-      tracking-wider
-    ">
-      <a href="https://www.linkedin.com/in/thomas-backers-54197621b/">
-        linkedin
+    <li
+      v-for="(media, i) of medias" 
+      class="
+        uppercase
+        text-xs
+        tracking-wider
+        pb-0.5
+      "
+    >
+      <a :href="media.href">
+        {{ media.label }}
       </a>
     </li>
   </ul>
