@@ -38,7 +38,8 @@ const handleFooter = () => {
       rounded-t-md
       text-center
       pb-24
-      pt-12
+      pt-3
+      max-w-sm
     ">
       <Player />
 
