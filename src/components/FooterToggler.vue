@@ -3,6 +3,8 @@ import { ChevronUpIcon } from '@heroicons/vue/solid'
 
 const emit = defineEmits(['toggle'])
 
+let isTogglerDown = false
+
 const handleToggler = () => {
   emit('toggle')
 }
@@ -29,3 +31,6 @@ const handleToggler = () => {
     <ChevronUpIcon class="w-7" />
   </button>
 </template>
+
+<style>
+</style>

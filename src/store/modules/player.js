@@ -15,6 +15,7 @@ const shuffleArr = array => {
   }
   return arrayCopy
 }
+
 // ------------------------------------------------------
 
 export const state = {
